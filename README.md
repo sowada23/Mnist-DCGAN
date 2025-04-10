@@ -24,27 +24,13 @@ The adversarial training process allows both models to improve over time—ultim
 
 ## Results
 
-### Generate using fixed noise (fixed_z_)
-| **GAN** | **DCGAN** |
+| **Final Epoch Grid** | **Training Gif** |
 |:-------:|:---------:|
-| ![GAN Epoch 59](./images/gan_epoch59.png) | ![DCGAN Epoch 19](./images/dcgan_epoch19.png) |
-| *Epoch 59* | *Epoch 19* |
+| ![Final Epoch Grid](./Final-epoch-grid.png) | ![Training Gif](./Training.gif) |
 
----
 
-### Final Epoch Image
-Below is the generator output at the final epoch (e.g., epoch 200):
 
-![Final Epoch Image](./images/final_epoch.png)
-
----
-
-### Training Progression GIF
-Here’s an animation showing how the generated samples evolve over training:
-
-![Training GIF](./images/training.gif)
-
-### Loss Function Over 200 Epochs
+## Loss Function Over 200 Epochs
 The loss plot below depicts the training progress, showing the generator and discriminator losses throughout 200 epochs.
   
 ![Loss Plot](./loss_plot_20250409_171730%20(2).png)
