@@ -23,15 +23,26 @@ The adversarial training process allows both models to improve over time—ultim
 - **Data:** MNIST dataset is loaded, preprocessed to the [-1, 1] range, and fed into the network.
 
 ## Results
-### Final Epoch 5x5 Grid Image
-At the end of 200 epochs, a 5x5 grid of generated images is saved. This grid illustrates the high-quality images produced by the trained generator.
-  
-![Final Epoch Grid](./epoch_0200_20250409_171730.png)
+
+### Generate using fixed noise (fixed_z_)
+| **GAN** | **DCGAN** |
+|:-------:|:---------:|
+| ![GAN Epoch 59](./images/gan_epoch59.png) | ![DCGAN Epoch 19](./images/dcgan_epoch19.png) |
+| *Epoch 59* | *Epoch 19* |
+
+---
+
+### Final Epoch Image
+Below is the generator output at the final epoch (e.g., epoch 200):
+
+![Final Epoch Image](./images/final_epoch.png)
+
+---
 
 ### Training Progression GIF
-A GIF animation shows the evolution of the generated images over the training epochs.
-  
-![Training Progression](./training_grid_20250409_171730.gif)
+Here’s an animation showing how the generated samples evolve over training:
+
+![Training GIF](./images/training.gif)
 
 ### Loss Function Over 200 Epochs
 The loss plot below depicts the training progress, showing the generator and discriminator losses throughout 200 epochs.
