@@ -23,7 +23,7 @@ The adversarial training process allows both models to improve over time—ultim
 - **Data:** Utilized MNIST dataset. MNIST is a dataset of 70,000 28×28 grayscale images of handwritten digits, split into 60,000 training and 10,000 test samples. It is widely used as a benchmark for image classification and deep learning experiments due to its simplicity and standardized format. [MNIST DATA](https://www.tensorflow.org/datasets/keras_example)
  
 - **Generator**
-``bash
+```python
     def build_generator():
         model = tf.keras.Sequential([
             layers.Dense(7*7*256, use_bias=False, input_shape=(100,)),  # Input: Noise vector
@@ -46,7 +46,6 @@ The adversarial training process allows both models to improve over time—ultim
 
     generator = build_generator()
     generator.summary()
-``
 
 ## Results
 
