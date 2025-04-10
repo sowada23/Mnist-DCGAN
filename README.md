@@ -2,8 +2,7 @@
 
 
 ## Overview
-This repository implements a Deep Convolutional Generative Adversarial Network (DCGAN) to generate handwritten digit images similar to those in the MNIST dataset. The project leverages TensorFlow/Keras for model building and training, uses GPU acceleration for speed, and provides comprehensive visualization of results.
-
+This repository implements a Deep Convolutional Generative Adversarial Network (DCGAN) to generate ssynthetic handwritten digit images similar to those in the MNIST dataset.
 
 
 ## Project Description
@@ -17,17 +16,37 @@ The adversarial training process allows both models to improve over time—ultim
 
 ## Implementation Details
 - **Language & Framework:** Python 3.12 with TensorFlow 2.x (using Keras API)
-- **GPU Support:** NVIDIA RTX A5000 (CUDA 12.4) used for accelerated training
 - **Training Parameters:**
   - **Epochs:** 200
   - **Loss Function:** Binary Cross-Entropy is used for both generator and discriminator losses
   - **Optimizers:** Adam optimizer with customized learning rates and decay schedules
-- **Key Files:**
-  - `MnistDCGAN.py` – Main training and evaluation script.
-  - SLURM batch file (e.g., `model.sbatch`) – For job submission on the HPC cluster.
-- **Data:** MNIST dataset is loaded, preprocessed to the [-1, 1] range, and fed into the network.
+- **Data:** Utilized MNIST dataset. MNIST is a dataset of 70,000 28×28 grayscale images of handwritten digits, split into 60,000 training and 10,000 test samples. It is widely used as a benchmark for image classification and deep learning experiments due to its simplicity and standardized format. [MNIST DATA](https://www.tensorflow.org/datasets/keras_example)
+ 
+- **Generator**
+``bash
+def build_generator():
+    model = tf.keras.Sequential([
+        layers.Dense(7*7*256, use_bias=False, input_shape=(100,)),  # Input: Noise vector
+        layers.Reshape((7, 7, 256)),  # Reshape to small feature map
+        layers.BatchNormalization(),
+        layers.LeakyReLU(alpha=0.2),
 
+        layers.Conv2DTranspose(128, (4,4), strides=(2,2), padding='same', use_bias=False),
+        layers.BatchNormalization(),
+        layers.LeakyReLU(alpha=0.2),
 
+        layers.Conv2DTranspose(64, (4,4), strides=(2,2), padding='same', use_bias=False),
+        layers.BatchNormalization(),
+        layers.LeakyReLU(alpha=0.2),
+        
+        layers.Conv2DTranspose(1, (4,4), strides=1, padding="same", activation="tanh")
+    ])
+    
+    return model
+
+generator = build_generator()
+generator.summary()
+``
 
 ## Results
 
