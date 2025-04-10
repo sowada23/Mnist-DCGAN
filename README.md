@@ -41,12 +41,7 @@ The adversarial training process allows both models to improve over time—ultim
             
             layers.Conv2DTranspose(1, (4,4), strides=1, padding="same", activation="tanh")
         ])
-        
-        return model
-
-    generator = build_generator()
-    generator.summary()
-
+```
 ## Results
 
 <table style="width:100%; margin:auto;">
