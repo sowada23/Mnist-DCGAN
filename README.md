@@ -40,7 +40,7 @@ The adversarial training process allows both models to improve over time—ultim
             layers.Conv2DTranspose(1, (4,4), strides=1, padding="same", activation="tanh")
         ])
 ```
-![Generator Architecture](./genarc.png)
+![Generator Architecture](./Arcimages/genarc.png)
 
 - **Descriminator**
 ```python
@@ -60,7 +60,7 @@ The adversarial training process allows both models to improve over time—ultim
         layers.Dense(1),  # Output probability (Real or Fake)
     ])
 ```
-![Descriminator Architecture](./disarc.png)
+![Descriminator Architecture](./Arcimages/disarc.png)
 
 
 ## Results
