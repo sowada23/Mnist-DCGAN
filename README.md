@@ -43,6 +43,28 @@ The adversarial training process allows both models to improve over time—ultim
         ])
 ```
 ![Generator Architecture](./genarc.png)
+
+- **Descriminator**
+```python
+    def build_discriminator():
+    base_model = keras.Sequential([
+        layers.Conv2D(6, kernel_size=5, strides=1, padding="valid", input_shape=(28, 28, 1)),
+        layers.LeakyReLU(0.2),
+        layers.AveragePooling2D(pool_size=(2, 2)),
+
+        layers.Conv2D(16, kernel_size=5, strides=1, padding="valid"),
+        layers.LeakyReLU(0.2),
+        layers.AveragePooling2D(pool_size=(2, 2)),
+
+        layers.Flatten(),
+        layers.Dense(120, activation="relu"),
+        layers.Dense(84, activation="relu"),
+        layers.Dense(1),  # Output probability (Real or Fake)
+    ])
+```
+![Descriminator Architecture](./disarc.png)
+
+
 ## Results
 
 <table style="width:100%; margin:auto;">
