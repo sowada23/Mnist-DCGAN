@@ -25,8 +25,23 @@ The adversarial training process allows both models to improve over time—ultim
 ## Results
 
 | **Final Epoch Grid** | **Training Gif** |
-|:-------:|:---------:|
-| ![Final Epoch Grid](./Final-epoch-grid.png) | ![Training Gif](./Training.gif) |
+<!-- |:-------:|:---------:|
+| ![Final Epoch Grid](./Final-epoch-grid.png) | ![Training Gif](./Training.gif) | 
+-->
+<table style="width:80%; margin:auto;">
+  <tr>
+    <th style="text-align:center;">Final Epoch Grid</th>
+    <th style="text-align:center;">Training Gif</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./Final-epoch-grid.png" width="300" />
+    </td>
+    <td align="center">
+      <img src="./Rraining.gif" width="300" />
+    </td>
+  </tr>
+</table>
 
 
 
