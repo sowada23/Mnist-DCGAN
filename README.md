@@ -38,10 +38,10 @@ The adversarial training process allows both models to improve over time—ultim
   </tr>
   <tr>
     <td align="center">
-      <img src="./Final-epoch-grid.png" width="400" />
+      <img src="./Final-epoch-grid.png" width="350" />
     </td>
     <td align="center">
-      <img src="./Training.gif" width="400" />
+      <img src="./Training.gif" width="350" />
     </td>
   </tr>
 </table>
