@@ -88,20 +88,6 @@ The loss plot below depicts the training progress, showing the generator and dis
 ![Loss Plot](./Output/Loss-plot.png)
 
 
-
-## Development Environment
-- **Operating Systems:**
-  - Local development on macOS
-  - HPC cluster (Linux) for large-scale training
-- **Python Version:** 3.12
-- **TensorFlow Version:** 2.x (tested with TensorFlow 2.9+)
-- **CUDA Version:** 12.4 (for GPU acceleration)
-- **Additional Tools:**
-  - **Jupyter Notebook** for interactive experiment development.
-  - **SLURM** for job scheduling on the HPC cluster.
-  - **Homebrew** for package management on macOS.
-
 ## Reference
-
 
 - [Deep Convolutional Generative Adversarial Network](https://www.tensorflow.org/tutorials/generative/dcgan)
