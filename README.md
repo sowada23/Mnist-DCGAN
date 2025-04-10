@@ -104,4 +104,4 @@ The loss plot below depicts the training progress, showing the generator and dis
 ## Reference
 
 
-[Deep Convolutional Generative Adversarial Network]:https://www.tensorflow.org/tutorials/generative/dcgan
+- [Deep Convolutional Generative Adversarial Network](https://www.tensorflow.org/tutorials/generative/dcgan)
