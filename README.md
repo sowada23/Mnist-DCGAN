@@ -72,10 +72,10 @@ The adversarial training process allows both models to improve over time—ultim
   </tr>
   <tr>
     <td align="center">
-      <img src="./Final-epoch-grid.png" width="330" />
+      <img src="./Output/Final-epoch-grid.png" width="330" />
     </td>
     <td align="center">
-      <img src="./Training.gif" width="330" />
+      <img src="./Output/Training.gif" width="330" />
     </td>
   </tr>
 </table>
@@ -85,7 +85,7 @@ The adversarial training process allows both models to improve over time—ultim
 ## Loss Function Over 200 Epochs
 The loss plot below depicts the training progress, showing the generator and discriminator losses throughout 200 epochs.
   
-![Loss Plot](./Loss-plot.png)
+![Loss Plot](./Output/Loss-plot.png)
 
 
 
