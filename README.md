@@ -1,7 +1,7 @@
 # DCGAN for MNIST Data Generation
 
 ## Overview
-This repository implements a Deep Convolutional Generative Adversarial Network (DCGAN) to generate ssynthetic handwritten digit images similar to those in the MNIST dataset.
+This repository implements a Deep Convolutional Generative Adversarial Network (DCGAN) to generate synthetic handwritten digit images similar to those in the MNIST dataset.
 
 ## Project Description
 The goal is to train a DCGAN that learns the distribution of the MNIST dataset and produces realistic handwritten digits. The implementation consists of two main neural networks:
