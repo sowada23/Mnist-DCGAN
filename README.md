@@ -101,10 +101,7 @@ The loss plot below depicts the training progress, showing the generator and dis
   - **SLURM** for job scheduling on the HPC cluster.
   - **Homebrew** for package management on macOS.
 
+## Reference
 
 
-## How to Run
-1. **Clone the Repository**
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+[Deep Convolutional Generative Adversarial Network](https://www.tensorflow.org/tutorials/generative/dcgan)
