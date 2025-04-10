@@ -24,28 +24,28 @@ The adversarial training process allows both models to improve over time—ultim
  
 - **Generator**
 ``bash
-def build_generator():
-    model = tf.keras.Sequential([
-        layers.Dense(7*7*256, use_bias=False, input_shape=(100,)),  # Input: Noise vector
-        layers.Reshape((7, 7, 256)),  # Reshape to small feature map
-        layers.BatchNormalization(),
-        layers.LeakyReLU(alpha=0.2),
+    def build_generator():
+        model = tf.keras.Sequential([
+            layers.Dense(7*7*256, use_bias=False, input_shape=(100,)),  # Input: Noise vector
+            layers.Reshape((7, 7, 256)),  # Reshape to small feature map
+            layers.BatchNormalization(),
+            layers.LeakyReLU(alpha=0.2),
 
-        layers.Conv2DTranspose(128, (4,4), strides=(2,2), padding='same', use_bias=False),
-        layers.BatchNormalization(),
-        layers.LeakyReLU(alpha=0.2),
+            layers.Conv2DTranspose(128, (4,4), strides=(2,2), padding='same', use_bias=False),
+            layers.BatchNormalization(),
+            layers.LeakyReLU(alpha=0.2),
 
-        layers.Conv2DTranspose(64, (4,4), strides=(2,2), padding='same', use_bias=False),
-        layers.BatchNormalization(),
-        layers.LeakyReLU(alpha=0.2),
+            layers.Conv2DTranspose(64, (4,4), strides=(2,2), padding='same', use_bias=False),
+            layers.BatchNormalization(),
+            layers.LeakyReLU(alpha=0.2),
+            
+            layers.Conv2DTranspose(1, (4,4), strides=1, padding="same", activation="tanh")
+        ])
         
-        layers.Conv2DTranspose(1, (4,4), strides=1, padding="same", activation="tanh")
-    ])
-    
-    return model
+        return model
 
-generator = build_generator()
-generator.summary()
+    generator = build_generator()
+    generator.summary()
 ``
 
 ## Results
